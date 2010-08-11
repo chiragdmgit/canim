@@ -1,7 +1,7 @@
 #labels Featured
-CSS Javascript Framework for Animation
+= Canim - CSS Javascript Framework for Animation =
 
-= How to use Canim =
+== How to use Canim ==
 
 {{{
 canimate('elmentid',
@@ -31,11 +31,11 @@ function bounce(pos) {
 }
 }}}
 
-= Details =
+== Details ==
 
-  * *`elementid`*: Element Id on which animation is to be applied.
-  * *`style`*: css inline styles for target animation.
-  * *`klass`*_(optional)_: comma seperated css class names for target animation.
-  * *`duration`*: duration in which whole animation take place _default: 1000ms_.
-  * *`callback`*_(optional)_: function that will be called after animation completes. it can be call to another animation as mentioned in above example or any other javascript function.
-  * *`easing`*_(optional)_: easing function for special effects like bounce as mnetioned above.
+  * *`elementid`*:  Element Id on which animation is to be applied.
+  * *`style`*:  css inline styles for target animation.
+  * *`klass`* _(optional)_:  comma seperated css class names for target animation.
+  * *`duration`*:  duration in which whole animation take place _default: 1000ms_.
+  * *`callback`* _(optional)_:  function that will be called after animation completes. it can be call to another animation as mentioned in above example or any other javascript function.
+  * *`easing`* _(optional)_:  easing function for special effects like bounce as mnetioned above.
