@@ -7,12 +7,12 @@ canimate('elmentid',
 {duration:'animation duration in ms',callback:'function that will be called after animation completes',easing:'easing function for special effects like bounce'}
 );
 
-`inline code`
+{{{
 canim('test2',{klass:'red,green', style:'left:100px;width:100px;'}, {duration: 1000, callback: function()
 {
 canim('test1',{klass:'new,red,', style:'opacity:1'}, {duration: 1000, callback: function() {alert('Finished');}, easing: bounce});
 }});
-`inline code`
+}}}
 
 = Details =
 
