@@ -1,3 +1,4 @@
+#labels Featured
 CSS Javascript Framework for Animation
 
 = How to use Canim =
@@ -16,6 +17,25 @@ canim('test1',{klass:'new,red,', style:'opacity:1'}, {duration: 1000, callback: 
 }});
 }}}
 
+{{{
+function bounce(pos) {
+	if (pos < (1/2.75)) {
+		return (7.5625*pos*pos);
+	} else if (pos < (2/2.75)) {
+		return (7.5625*(pos-=(1.5/2.75))*pos + .75);
+	} else if (pos < (2.5/2.75)) {
+		return (7.5625*(pos-=(2.25/2.75))*pos + .9375);
+	} else {
+		return (7.5625*(pos-=(2.625/2.75))*pos + .984375);
+	}
+}
+}}}
+
 = Details =
 
   * *`elementid`*: Element Id on which animation is to be applied.
+  * *`style`*: css inline styles for target animation.
+  * *`klass`*_(optional)_: comma seperated css class names for target animation.
+  * *`duration`*: duration in which whole animation take place _default: 1000ms_.
+  * *`callback`*_(optional)_: function that will be called after animation completes. it can be call to another animation as mentioned in above example or any other javascript function.
+  * *`easing`*_(optional)_: easing function for special effects like bounce as mnetioned above.
