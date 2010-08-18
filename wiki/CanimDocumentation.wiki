@@ -1,5 +1,5 @@
 #labels Featured
-= Canim - CSS Javascript Framework for Animation =
+= Canim - Javascript Framework for CSS Animation =
 
 == How to use Canim ==
 
