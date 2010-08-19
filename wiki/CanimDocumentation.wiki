@@ -4,7 +4,7 @@
 == How to use Canim ==
 
 {{{
-canimate('elmentid',
+canim('elmentid',
 {klass:'comma seperated css class names', style:'css inline styles'},
 {duration:'animation duration in ms',callback:'function that will be called after animation completes',easing:'easing function for special effects like bounce'}
 );
