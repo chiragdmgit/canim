@@ -1,0 +1,50 @@
+# Canim - Javascript Framework for CSS Animation #
+
+## How to use Canim ##
+
+```
+canim('elmentid',
+{klass:'comma seperated css class names', style:'css inline styles'},
+{duration:'animation duration in ms',callback:'function that will be called after animation completes',easing:'easing function for special effects like bounce'}
+);
+```
+
+```
+<style>
+.red {width:50px;border:10px solid #f00;}
+.new { width:150px;}
+.green {padding:5px;background:#0f0;}
+</style>
+<div id="test1" style="position:absolute;left:0px;background:#000;opacity:0;text-align:center;border:5px solid #fff;width:300px;">test</div>
+<div id="test2" style="opacity:1;border:5px solid #fff;position:absolute;left:0px;top:400px;background:#000">test</div>
+
+<script src="canim.min.js"></script>
+<script>
+canim('test2',{klass:'red,green', style:'left:100px;width:100px;'}, {duration: 1000, callback: function()
+{
+canim('test1',{klass:'new,red,', style:'opacity:1'}, {duration: 1000, callback: function() {alert('Finished');}, easing: bounce});
+}});
+
+function bounce(pos) {
+	if (pos < (1/2.75)) {
+		return (7.5625*pos*pos);
+	} else if (pos < (2/2.75)) {
+		return (7.5625*(pos-=(1.5/2.75))*pos + .75);
+	} else if (pos < (2.5/2.75)) {
+		return (7.5625*(pos-=(2.25/2.75))*pos + .9375);
+	} else {
+		return (7.5625*(pos-=(2.625/2.75))*pos + .984375);
+	}
+}
+</script>
+}});
+```
+
+## Details ##
+
+  * **`elementid`**:  Element Id on which animation is to be applied.
+  * **`style`**:  css inline styles for target animation.
+  * **`klass`** _(optional)_:  comma seperated css class names for target animation.
+  * **`duration`**:  duration in which whole animation take place _default: 1000ms_.
+  * **`callback`** _(optional)_:  function that will be called after animation completes. it can be call to another animation as mentioned in above example or any other javascript function.
+  * **`easing`** _(optional)_:  easing function for special effects like bounce as mnetioned above.
